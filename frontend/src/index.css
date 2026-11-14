@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0b1f3a;
+  --color-primary-light: #16335b;
+  --color-accent: #14b8a6;
+  --color-accent-dark: #0e9486;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+/* Reusable component classes */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 bg-accent text-white hover:bg-accent-dark;
+}
+.btn-dark {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 bg-primary text-white hover:bg-primary-light;
+}
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 border border-slate-300 bg-white text-slate-700 hover:bg-slate-100;
+}
+.btn-danger {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 bg-red-600 text-white hover:bg-red-700;
+}
+.input {
+  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30;
+}
+.label {
+  @apply mb-1 block text-sm font-medium text-slate-700;
+}
+.card {
+  @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm;
+}
+.th {
+  @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500;
+}
+.td {
+  @apply px-4 py-3 text-sm;
+}
+
+/* Printing: show only the receipt */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .print-area {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
