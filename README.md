@@ -1,5 +1,9 @@
 # ParkHex - Parking Management System
 
+**Live Demo:** [parkhex.vercel.app](https://parkhex.vercel.app/)
+
+![ParkHex Screenshots](screenshots)
+
 ParkHex is a web-based Parking Management System built with the MERN stack (MongoDB, Express.js, React, Node.js). It helps parking lot owners manage parking slots, vehicle entry and exit, automatic billing, receipts and income reports, with role-based access for administrators and staff.
 
 ## Table of Contents
